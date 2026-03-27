@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class InverterNumero {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite um número: ");
+        int num = sc.nextInt();
+
+        int invertido = inverter(num);
+        System.out.println("Número invertido: " + invertido);
+    }
+
+    public static int inverter(int n) {
+        int resultado = 0;
+
+        while (n != 0) {
+            int digito = n % 10;
+            resultado = resultado * 10 + digito;
+            n = n / 10;
+        }
+
+        return resultado;
+    }
+}
